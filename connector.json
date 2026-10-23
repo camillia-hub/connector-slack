@@ -1,0 +1,12 @@
+{
+  "entry": "index.js",
+  "triggers": [
+    { "type": "webhook" },
+    { "type": "poll", "schedule": "*/5 * * * *" }
+  ],
+  "grants": ["create-task"],
+  "secrets": [
+    { "key": "SLACK_BOT_TOKEN", "description": "Slack bot token (xoxb-…) with channels:history + groups:history, used by the poll trigger.", "required": false },
+    { "key": "SLACK_CHANNEL_IDS", "description": "Comma-separated Slack channel ids the poll trigger reads (e.g. C0123ABCDEF,C0456GHIJK).", "required": false }
+  ]
+}
